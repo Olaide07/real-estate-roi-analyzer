@@ -11,10 +11,11 @@ from roi_functions import (
 # ===============================
 # PAGE CONFIG
 # ===============================
-st.set_page_config(page_title="ROI Investment Analyzer", layout="centered")
+st.set_page_config(page_title="Lagos ROI Analyzer", layout="centered")
 
-st.title("🏠 Real Estate ROI Analyzer")
-st.write("Compare and evaluate property investments with smart insights")
+st.title("🏠 Lagos Real Estate ROI Analyzer")
+st.write("Evaluate and compare property investments using Lagos market insights")
+st.caption("📍 This tool is optimized for Lagos real estate market assumptions")
 
 # ===============================
 # OPTION
@@ -72,14 +73,14 @@ if st.button("Compare Investments"):
 
     with st.spinner("Analyzing investments..."):
 
-        # Property A calculations
+        # Property A
         roi_a, profit_a = calculate_roi(price_a, rent_a, expenses_a)
         payback_a = payback_period(price_a, profit_a)
         rating_a = investment_rating(roi_a)
         monthly_a = monthly_cashflow(rent_a, expenses_a)
         insight_a = investment_insight(roi_a)
 
-        # Property B calculations
+        # Property B
         roi_b, profit_b = calculate_roi(price_b, rent_b, expenses_b)
         payback_b = payback_period(price_b, profit_b)
         rating_b = investment_rating(roi_b)
