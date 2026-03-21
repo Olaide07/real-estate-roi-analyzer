@@ -1,4 +1,4 @@
-# Lagos Real Estate ROI Analyzer
+# Lagos Property ROI Analyzer
 
 A smart real estate investment tool that evaluates and compares property profitability using financial metrics and location-based intelligence.
 
@@ -6,7 +6,7 @@ A smart real estate investment tool that evaluates and compares property profita
 
 ## Live App
 
-👉 [Click here to use the app](https://real-estate-roi-analyzer.streamlit.app/)
+👉 [Click here to use the app](https://lagos-property-roi-analyzer.streamlit.app/)
 
 ---
 
