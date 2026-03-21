@@ -1,4 +1,4 @@
-# Real Estate ROI Analyzer
+# Lagos Real Estate ROI Analyzer
 
 A smart real estate investment tool that evaluates and compares property profitability using financial metrics and location-based intelligence.
 
