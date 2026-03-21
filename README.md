@@ -6,7 +6,7 @@ A smart real estate investment tool that evaluates and compares property profita
 
 ## Live App
 
-👉 [Click here to use the app](https://your-roi-app-link.streamlit.app/)
+👉 [Click here to use the app](https://real-estate-roi-analyzer.streamlit.app/)
 
 ---
 
