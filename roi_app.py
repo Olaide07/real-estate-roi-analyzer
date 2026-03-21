@@ -32,13 +32,13 @@ locations = [
 st.sidebar.header("Property A")
 
 location_a = st.sidebar.selectbox("Location A", locations)
-price_a = st.sidebar.number_input("Price A (₦)", min_value=1_000_000, step=100_000)
+price_a = st.sidebar.number_input("Price A (₦)", min_value=0, step=100_000)
 
 if use_estimated_rent:
     rent_a = estimate_rent(price_a, location_a)
     st.sidebar.write(f"Estimated Rent A: ₦{rent_a:,.0f}")
 else:
-    rent_a = st.sidebar.number_input("Annual Rent A (₦)", min_value=100_000, step=50_000)
+    rent_a = st.sidebar.number_input("Annual Rent A (₦)", min_value=0, step=50_000)
 
 expenses_a = st.sidebar.number_input("Expenses A (₦)", min_value=0, step=50_000)
 
@@ -50,13 +50,13 @@ st.sidebar.markdown("---")
 st.sidebar.header("Property B")
 
 location_b = st.sidebar.selectbox("Location B", locations)
-price_b = st.sidebar.number_input("Price B (₦)", min_value=1_000_000, step=100_000)
+price_b = st.sidebar.number_input("Price B (₦)", min_value=0, step=100_000)
 
 if use_estimated_rent:
     rent_b = estimate_rent(price_b, location_b)
     st.sidebar.write(f"Estimated Rent B: ₦{rent_b:,.0f}")
 else:
-    rent_b = st.sidebar.number_input("Annual Rent B (₦)", min_value=100_000, step=50_000)
+    rent_b = st.sidebar.number_input("Annual Rent B (₦)", min_value=0, step=50_000)
 
 expenses_b = st.sidebar.number_input("Expenses B (₦)", min_value=0, step=50_000)
 
@@ -65,19 +65,26 @@ expenses_b = st.sidebar.number_input("Expenses B (₦)", min_value=0, step=50_00
 # ===============================
 if st.button("Compare Investments"):
 
-    # Property A calculations
-    roi_a, profit_a = calculate_roi(price_a, rent_a, expenses_a)
-    payback_a = payback_period(price_a, profit_a)
-    rating_a = investment_rating(roi_a)
-    monthly_a = monthly_cashflow(rent_a, expenses_a)
-    insight_a = investment_insight(roi_a)
+    # Input validation
+    if price_a <= 0 or price_b <= 0:
+        st.warning("Please enter valid property prices.")
+        st.stop()
 
-    # Property B calculations
-    roi_b, profit_b = calculate_roi(price_b, rent_b, expenses_b)
-    payback_b = payback_period(price_b, profit_b)
-    rating_b = investment_rating(roi_b)
-    monthly_b = monthly_cashflow(rent_b, expenses_b)
-    insight_b = investment_insight(roi_b)
+    with st.spinner("Analyzing investments..."):
+
+        # Property A calculations
+        roi_a, profit_a = calculate_roi(price_a, rent_a, expenses_a)
+        payback_a = payback_period(price_a, profit_a)
+        rating_a = investment_rating(roi_a)
+        monthly_a = monthly_cashflow(rent_a, expenses_a)
+        insight_a = investment_insight(roi_a)
+
+        # Property B calculations
+        roi_b, profit_b = calculate_roi(price_b, rent_b, expenses_b)
+        payback_b = payback_period(price_b, profit_b)
+        rating_b = investment_rating(roi_b)
+        monthly_b = monthly_cashflow(rent_b, expenses_b)
+        insight_b = investment_insight(roi_b)
 
     # ===============================
     # DISPLAY RESULTS
