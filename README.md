@@ -74,6 +74,8 @@ Insight: Strong Cashflow Investment
 
 ---
 
+```
+
 ## Project Structure
 real-estate-roi-analyzer/
 │
@@ -82,7 +84,7 @@ real-estate-roi-analyzer/
 ├── requirements.txt # Dependencies
 └── README.md # Documentation
 
-
+```
 ---
 
 
