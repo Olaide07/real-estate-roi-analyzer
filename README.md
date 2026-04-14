@@ -82,6 +82,7 @@ Insight: Strong Cashflow Investment
 
 ```
 ## Project Structure
+```
 real-estate-roi-analyzer/
 │
 ├── roi_app.py # Streamlit application
