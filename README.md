@@ -79,8 +79,8 @@ Insight: Strong Cashflow Investment
 
 ---
 
-```
 
+```
 ## Project Structure
 real-estate-roi-analyzer/
 │
@@ -88,8 +88,8 @@ real-estate-roi-analyzer/
 ├── roi_functions.py # Core logic and calculations
 ├── requirements.txt # Dependencies
 └── README.md # Documentation
-
 ```
+
 ---
 
 
