@@ -10,6 +10,13 @@ A smart real estate investment tool that evaluates and compares property profita
 
 ---
 
+```
+## Screenshot Here
+<img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/59479ad2-ebb1-46ed-8821-41239fa7c9a9" />
+
+```
+
+
 ## Project Overview
 
 Real estate investment decisions are often based on incomplete information. This project provides a structured way to evaluate properties using key financial indicators.
