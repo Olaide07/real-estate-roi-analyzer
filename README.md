@@ -40,11 +40,6 @@ It also compares multiple properties side-by-side to support better decision-mak
 
 ---
 
-##  **Dashboard Preview**
-<img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/d9593473-efb6-4877-a19e-4d69cbe89cc0" />
-
-
-```
 
 ## Model Insight
 
